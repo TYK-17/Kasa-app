@@ -1,20 +1,17 @@
-import logements from '../data/logements.json';
+import logements from '../data/logements.json'
+import Card from '../components/Card'
 
 function Home() {
   return (
     <div>
       <h1>Liste des logements</h1>
-      <ul>
+      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '20px' }}>
         {logements.map((logement) => (
-          <li key={logement.id}>
-            <h2>{logement.title}</h2>
-            <p>{logement.location}</p>
-            <img src={logement.cover} alt={logement.title} width="300" />
-          </li>
+          <Card key={logement.id} logement={logement} />
         ))}
-      </ul>
+      </div>
     </div>
-  );
+  )
 }
 
-export default Home;
+export default Home
