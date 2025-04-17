@@ -1,17 +1,23 @@
-import logements from '../data/logements.json'
-import Card from '../components/Card'
+import logements from "../data/logements.json";
+import Card from "../components/Card";
+import Banner from "../components/Banner";
+import "./Home.scss";
 
 function Home() {
   return (
-    <div>
-      <h1>Liste des logements</h1>
-      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '20px' }}>
+    <div className="home-container">
+      <Banner
+        image="/assets/banner.png"
+        text="Chez vous, partout et ailleurs"
+      />
+
+      <div className="card-grid">
         {logements.map((logement) => (
           <Card key={logement.id} logement={logement} />
         ))}
       </div>
     </div>
-  )
+  );
 }
 
-export default Home
+export default Home;

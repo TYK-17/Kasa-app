@@ -1,11 +1,14 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from "react-router-dom";
+import "./Header.scss";
 
 function Header() {
   return (
-    <header style={{ padding: '1rem', backgroundColor: '#ff6060', color: '#fff' }}>
-      <nav style={{ display: 'flex', gap: '1rem' }}>
-        <Link to="/" style={{ color: 'white', textDecoration: 'none' }}>Accueil</Link>
-        <Link to="/about" style={{ color: 'white', textDecoration: 'none' }}>À propos</Link>
+    <header>
+      <img src="/assets/logo.png" alt="Kasa Logo" style={{ height: "68px" }} />
+
+      <nav>
+        <NavLink to="/">Accueil</NavLink>
+        <NavLink to="/about">A Propos</NavLink>
       </nav>
     </header>
   );
