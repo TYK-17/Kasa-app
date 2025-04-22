@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import './Carousel.scss';
 
 function Carousel({ pictures }) {
   const [current, setCurrent] = useState(0);
@@ -9,7 +10,12 @@ function Carousel({ pictures }) {
 
   return (
     <div style={{ position: 'relative' }}>
-      <img src={pictures[current]} alt={`Slide ${current}`} style={{ width: '100%', height: '400px', objectFit: 'cover' }} />
+      <img
+  src={pictures[current]}
+  alt={`Slide ${current}`}
+  className="carousel-image"
+/>
+
       {total > 1 && (
         <>
           <button onClick={prev} style={{ position: 'absolute', top: '50%', left: '1rem' }}>‹</button>

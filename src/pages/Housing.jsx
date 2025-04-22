@@ -4,41 +4,62 @@ import Carousel from '../components/Carousel';
 import Collapse from '../components/Collapse';
 import Rating from '../components/Rating';
 import Tag from '../components/Tag';
+import './Housing.scss';
 
 function Housing() {
   const { id } = useParams();
-  const housing = housings.find((l) => l.id === id);
+  const housing = housings.find((item) => item.id === id);
 
   if (!housing) return <Navigate to="/404" />;
 
+  const nameParts = housing.host.name.split(' ');
+const firstName = nameParts.slice(0, -1).join(' ');
+const lastName = nameParts.slice(-1).join(' ');
+
+
   return (
-    <div>
+    <div className="housing-container">
       <Carousel pictures={housing.pictures} />
-      <div style={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', marginTop: '1rem' }}>
-        <div>
-          <h1>{housing.title}</h1>
-          <p>{housing.location}</p>
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
-            {housing.tags.map((tag, i) => (
-              <Tag key={i} label={tag} />
+
+      <div className="housing-header">
+        <div className="left">
+          <h1 className="housing-title">{housing.title}</h1>
+          <p className="housing-location">{housing.location}</p>
+          <div className="tags">
+            {housing.tags.map((tag, index) => (
+              <Tag key={index} label={tag} />
             ))}
           </div>
         </div>
 
-        <div style={{ textAlign: 'right' }}>
-          <div>
-            <span>{housing.host.name}</span><br />
-            <img src={housing.host.picture} alt={housing.host.name} style={{ width: '50px', borderRadius: '50%' }} />
+        <div className="right">
+          <div className="host">
+          <span className="host-name">
+  {firstName}<br />{lastName}
+</span>
+
+            <img
+              src={housing.host.picture}
+              alt={housing.host.name}
+              className="host-picture"
+            />
           </div>
           <Rating rating={housing.rating} />
         </div>
       </div>
 
-      <div style={{ display: 'flex', gap: '2rem', marginTop: '2rem' }}>
+      <div className="collapses-horizontal">
         <Collapse title="Description" content={housing.description} />
-        <Collapse title="Équipements" content={
-          <ul>{housing.equipments.map((eq, i) => <li key={i}>{eq}</li>)}</ul>
-        } />
+        <Collapse
+          title="Équipements"
+          content={
+            <ul>
+              {housing.equipments.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          }
+        />
       </div>
     </div>
   );

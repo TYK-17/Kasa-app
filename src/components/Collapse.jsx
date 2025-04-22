@@ -6,15 +6,21 @@ function Collapse({ title, content }) {
 
   return (
     <div className="collapse">
-      <div
-        className={`collapse-title ${open ? 'open' : ''}`}
+      <button
+        className={`collapse-header ${open ? 'open' : ''}`}
         onClick={() => setOpen(!open)}
       >
-        {title}
-      </div>
+        <span>{title}</span>
+        <img
+          src="/assets/vector.png"
+          alt="chevron"
+          className={`vector-icon ${open ? 'open' : ''}`}
+        />
+      </button>
+
       {open && (
         <div className="collapse-content">
-          {content}
+          {typeof content === 'string' ? <p>{content}</p> : content}
         </div>
       )}
     </div>

@@ -3,14 +3,18 @@ import "./Header.scss";
 
 function Header() {
   return (
-    <header>
-      <img src="/assets/logo.png" alt="Kasa Logo" style={{ height: "68px" }} />
-
-      <nav>
-        <NavLink to="/">Accueil</NavLink>
-        <NavLink to="/about">A Propos</NavLink>
-      </nav>
-    </header>
+    <header className="header">
+    <img src="/assets/logo.png" alt="Kasa Logo" style={{ height: "68px" }} />
+    <nav className="header-nav">
+      <NavLink to="/" className={({ isActive }) => (isActive ? 'active' : '')}>
+        Accueil
+      </NavLink>
+      <NavLink to="/about" className={({ isActive }) => (isActive ? 'active' : '')}>
+        A Propos
+      </NavLink>
+    </nav>
+  </header>
+  
   );
 }
 

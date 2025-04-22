@@ -1,26 +1,65 @@
-// src/components/Collapse.scss
-
 .collapse {
-    width: 100%;
-  }
-  
-  .collapse-title {
+  width: 100%;
+  margin-bottom: 1.5rem;
+
+  .collapse-header {
     background-color: #ff6060;
     color: white;
-    padding: 0.8rem;
-    cursor: pointer;
+    padding: 1rem 1.5rem;
     font-weight: bold;
-    margin-bottom: 1rem;
-  
-    // Quand le panneau est ouvert, la marge doit disparaître
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+    border-radius: 10px 10px;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
     &.open {
-      margin-bottom: 0;
+      border-radius: 5px;
+    }
+
+    span {
+      text-align: left;
+    }
+
+    .vector-icon {
+      width: 24px;
+      height: 13px;
+      transition: transform 0.3s ease;
+    }
+
+    .vector-icon.open {
+      transform: rotate(-180deg);
+    }
+  }
+
+  .collapse-content {
+    background-color: #f7f7f7;
+    padding: 1rem 1.5rem;
+    font-size: 18px;
+    line-height: 142.6%;
+    color: #000; 
+    border-radius: 0 0 5px 5px;
+  
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+  
+    ul {
+      padding-left: 0;
+      list-style: none;
+  
+      li {
+        margin-bottom: 0.5rem;
+      }
+    }
+  
+    p {
+      margin: 0;
     }
   }
   
-  .collapse-content {
-    background-color: #f7f7f7;
-    padding: 1rem;
-    margin-bottom: 1rem;
-  }
   
+}

@@ -6,15 +6,15 @@ function Rating({ rating }) {
   return (
     <div className="rating">
       {stars.map((star) => (
-        <span
+        <img
           key={star}
-          className={`star ${star <= rating ? 'filled' : ''}`}
-        >
-          ★
-        </span>
+          src={star <= rating ? "/assets/star.png" : "/assets/star-inert.png"}
+          alt={star <= rating ? "Étoile pleine" : "Étoile vide"}
+          className="star-icon"
+        />
       ))}
     </div>
   );
 }
 
-export default Rating; // ✅ TRÈS IMPORTANT
+export default Rating;

@@ -1,17 +1,15 @@
-// src/components/Rating.scss
-
 .rating {
-    display: flex;
-    gap: 0.2rem;
-    justify-content: flex-end;
+  display: flex;
+  justify-content: flex-end;
+
+  .star-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    margin-left: 8px; // ✅ ajoute un espacement entre chaque étoile
   }
-  
-  .star {
-    font-size: 1.5rem;
-    color: #e3e3e3; // par défaut (étoile vide)
+
+  .star-icon:first-child {
+    margin-left: 0; // ✅ pour éviter un décalage au début
   }
-  
-  .star.filled {
-    color: #ff6060; // si l’étoile est remplie
-  }
-  
+}
