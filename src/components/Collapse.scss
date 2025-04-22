@@ -1,0 +1,26 @@
+// src/components/Collapse.scss
+
+.collapse {
+    width: 100%;
+  }
+  
+  .collapse-title {
+    background-color: #ff6060;
+    color: white;
+    padding: 0.8rem;
+    cursor: pointer;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  
+    // Quand le panneau est ouvert, la marge doit disparaître
+    &.open {
+      margin-bottom: 0;
+    }
+  }
+  
+  .collapse-content {
+    background-color: #f7f7f7;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  

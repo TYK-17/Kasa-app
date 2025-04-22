@@ -4,8 +4,8 @@ function Carousel({ pictures }) {
   const [current, setCurrent] = useState(0);
   const total = pictures.length;
 
-  const next = () => setCurrent((current + 1) % total);
-  const prev = () => setCurrent((current - 1 + total) % total);
+  const next = () => current === total - 1 ? setCurrent(0) : setCurrent(current + 1);
+  const prev = () => current === 0 ? setCurrent(total - 1) : setCurrent(current - 1);
 
   return (
     <div style={{ position: 'relative' }}>

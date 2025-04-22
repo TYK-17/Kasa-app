@@ -1,26 +1,16 @@
 import { Link } from "react-router-dom";
+import './Card.scss';
 
-function Card({ logement }) {
+function Card({ housing }) {
   return (
-    <Link
-      to={`/logement/${logement.id}`}
-      style={{ textDecoration: "none", color: "inherit" }}
-    >
+    <Link to={`/housing/${housing.id}`} className="card-link">
       <div
+        className="card"
         style={{
-          backgroundImage: `linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent), url(${logement.cover})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          height: "340px",
-          borderRadius: "10px",
-          display: "flex",
-          alignItems: "flex-end",
-          padding: "1rem",
-          color: "white",
-          fontWeight: "bold",
+          backgroundImage: `linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent), url(${housing.cover})`,
         }}
       >
-        {logement.title}
+        {housing.title}
       </div>
     </Link>
   );

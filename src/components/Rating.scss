@@ -1,0 +1,17 @@
+// src/components/Rating.scss
+
+.rating {
+    display: flex;
+    gap: 0.2rem;
+    justify-content: flex-end;
+  }
+  
+  .star {
+    font-size: 1.5rem;
+    color: #e3e3e3; // par défaut (étoile vide)
+  }
+  
+  .star.filled {
+    color: #ff6060; // si l’étoile est remplie
+  }
+  

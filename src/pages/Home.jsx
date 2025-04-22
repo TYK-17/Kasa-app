@@ -1,4 +1,4 @@
-import logements from "../data/logements.json";
+import housings from "../data/housings.json";
 import Card from "../components/Card";
 import Banner from "../components/Banner";
 import "./Home.scss";
@@ -12,8 +12,8 @@ function Home() {
       />
 
       <div className="card-grid">
-        {logements.map((logement) => (
-          <Card key={logement.id} logement={logement} />
+        {housings.map((housing) => (
+          <Card key={housing.id} housing={housing} />
         ))}
       </div>
     </div>
