@@ -1,7 +1,10 @@
 import Collapse from '../components/Collapse'
+import Banner from '../components/Banner'
 
 function About() {
   return (
+    <>
+      <Banner image="/assets/mountain.png" />
     <div style={{ maxWidth: '800px', margin: '2rem auto' }}>
       <Collapse title="Fiabilité" content={
         <p>
@@ -24,7 +27,8 @@ function About() {
         </p>
       } />
     </div>
-  )
+    </>
+  );
 }
 
 export default About

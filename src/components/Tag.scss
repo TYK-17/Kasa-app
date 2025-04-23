@@ -1,11 +1,15 @@
-// src/components/Tag.scss
-
 .tag {
     background-color: #ff6060;
     color: white;
-    padding: 0.3rem 0.8rem;
-    border-radius: 0.5rem;
-    font-size: 0.8rem;
-    display: inline-block;
+    padding: 3px 29px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
   }
   
