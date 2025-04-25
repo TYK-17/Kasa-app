@@ -59,7 +59,15 @@
     p {
       margin: 0;
     }
+  }  
+}
+
+.about-collapses {
+  .collapse-header {
+    border-radius: 5px !important;
   }
-  
-  
+
+  .collapse-content {
+    border-radius: 0 0 5px 5px !important;
+  }
 }
