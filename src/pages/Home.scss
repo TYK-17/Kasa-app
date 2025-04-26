@@ -1,14 +1,30 @@
 .home-container {
   max-width: 1240px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0 2rem;
+
+  @media (max-width: 768px) {
+    padding: 0 10px;
+  }
 }
 
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
   background-color: #f6f6f6;
   padding: 3rem;
   border-radius: 25px;
+  align-items: stretch;
+
+  @media (max-width: 768px) {
+    display: flex; // ✅ Flex en mobile
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    padding: 0;
+    border-radius: 0;
+    width: 100%; // ✅ Prend toute la largeur disponible dans home-container
+  }
 }

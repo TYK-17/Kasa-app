@@ -1,10 +1,15 @@
 import './Banner.scss';
 
-function Banner({ image, text }) {
+function Banner({ image, text = "" }) {
   return (
     <div className="banner">
       <img src={image} alt="Bannière" />
-      <h1>{text}</h1>
+      {text && (
+        <h1>
+          Chez vous, <br className="mobile-line-break" />
+          partout et ailleurs
+        </h1>
+      )}
     </div>
   );
 }
