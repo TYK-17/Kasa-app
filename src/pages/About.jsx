@@ -1,14 +1,15 @@
 import Collapse from '../components/Collapse'
 import Banner from '../components/Banner'
 import mountainImage from '/assets/mountain.png'
+import './About.scss';
 
 function About() {
   return (
-    <>
+    <div className="about-container">
       <Banner image={mountainImage} />
 
-      <div className="about-collapses" style={{ maxWidth: '800px', margin: '2rem auto' }}>
-
+      
+      <div className="about-collapses">
       <Collapse title="Fiabilité" content={
         <p>
           Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes.
@@ -30,7 +31,7 @@ function About() {
         </p>
       } />
     </div>
-    </>
+    </div>
   );
 }
 
