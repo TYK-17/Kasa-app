@@ -7,22 +7,22 @@
 
   min-height: 100vh;
   background-color: #fff;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   text-align: center;
 
-  h1 {
+  .error-code {
     font-size: 288px;
     color: #ff6060;
     margin: 0;
   }
 
-  p {
+  .error-message {
     font-size: 36px;
     color: #ff6060;
     margin: 0;
   }
 
-  a {
+  .error-link {
     margin-top: 1rem;
     color: #000;
     text-decoration: underline;
@@ -33,16 +33,16 @@
     padding: 20px 0 0;
     gap: 113px;
 
-    h1 {
+    .error-code {
       font-size: 96px;
     }
 
-    p {
+    .error-message {
       font-size: 18px;
       padding: 0 1.5rem;
     }
 
-    a {
+    .error-link {
       font-size: 14px;
     }
   }

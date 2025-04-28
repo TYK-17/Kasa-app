@@ -1,22 +1,39 @@
 .footer {
   background-color: #000;
   color: #fff;
-  padding: 3rem 1rem;
   width: 100%;
+  padding: 3rem 1rem;
   text-align: center;
 
-  .container {
+  .footer-container {
     max-width: 1240px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
   }
 
-  img {
+  .footer-logo {
     height: 40px;
-    margin-bottom: 1rem;
   }
 
-  p {
+  .footer-text {
     font-size: 0.9rem;
     margin: 0;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+  }
+
+  @media (max-width: 768px) {
+    padding: 2rem 1rem;
+
+    .footer-logo {
+      height: 30px;
+    }
+
+    .footer-text {
+      font-size: 0.8rem;
+    }
   }
 }

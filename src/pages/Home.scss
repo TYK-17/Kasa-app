@@ -18,13 +18,13 @@
   align-items: stretch;
 
   @media (max-width: 768px) {
-    display: flex; // ✅ Flex en mobile
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     background: none;
     padding: 0;
     border-radius: 0;
-    width: 100%; // ✅ Prend toute la largeur disponible dans home-container
+    width: 100%;
   }
 }

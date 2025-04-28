@@ -1,15 +1,11 @@
 .rating {
   display: flex;
   justify-content: flex-end;
+  gap: 8px;
 
   .star-icon {
     width: 24px;
     height: 24px;
     object-fit: contain;
-    margin-left: 8px; // ✅ ajoute un espacement entre chaque étoile
-  }
-
-  .star-icon:first-child {
-    margin-left: 0; // ✅ pour éviter un décalage au début
   }
 }

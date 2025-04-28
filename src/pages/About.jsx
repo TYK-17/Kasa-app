@@ -1,38 +1,24 @@
-import Collapse from '../components/Collapse'
-import Banner from '../components/Banner'
-import mountainImage from '/assets/mountain.png'
-import './About.scss';
+import Collapse from "../components/Collapse";
+import Banner from "../components/Banner";
+import mountainImage from "/assets/mountain.png";
+import aboutData from "../data/aboutData.json";
+import "./About.scss";
 
 function About() {
   return (
     <div className="about-container">
-      <Banner image={mountainImage} />
-
-      
+      <Banner image={mountainImage} alt="Montagnes enneigées" />
       <div className="about-collapses">
-      <Collapse title="Fiabilité" content={
-        <p>
-          Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes.
-        </p>
-      } />
-      <Collapse title="Respect" content={
-        <p>
-          La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme.
-        </p>
-      } />
-      <Collapse title="Service" content={
-        <p>
-          Nos équipes se tiennent à votre disposition pour vous fournir une expérience parfaite. N'hésitez pas à nous contacter si vous avez la moindre question.
-        </p>
-      } />
-      <Collapse title="Sécurité" content={
-        <p>
-          La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés.
-        </p>
-      } />
-    </div>
+        {aboutData && aboutData.length > 0 ? (
+          aboutData.map((item) => (
+            <Collapse key={item.id} title={item.title} content={item.content} />
+          ))
+        ) : (
+          <p>Aucune information disponible pour le moment.</p>
+        )}
+      </div>
     </div>
   );
 }
 
-export default About
+export default About;

@@ -1,20 +1,19 @@
 import housings from "../data/housings.json";
 import Card from "../components/Card";
 import Banner from "../components/Banner";
+import bannerImage from "/assets/banner.png";
 import "./Home.scss";
 
 function Home() {
   return (
     <div className="home-container">
-      <Banner
-        image="/assets/banner.png"
-        text="Chez vous, partout et ailleurs"
-      />
-
+      <Banner image={bannerImage} text="Chez vous, partout et ailleurs" />
       <div className="card-grid">
-        {housings.map((housing) => (
-          <Card key={housing.id} housing={housing} />
-        ))}
+        {housings && housings.length > 0 ? (
+          housings.map((housing) => <Card key={housing.id} housing={housing} />)
+        ) : (
+          <p>Aucun logement disponible pour le moment.</p>
+        )}
       </div>
     </div>
   );
