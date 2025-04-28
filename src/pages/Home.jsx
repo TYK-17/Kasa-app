@@ -1,6 +1,6 @@
 import housings from "../data/housings.json";
-import Card from "../components/Card";
-import Banner from "../components/Banner";
+import Card from "../components/Card/Card";
+import Banner from "../components/Banner/Banner";
 import bannerImage from "/assets/banner.png";
 import "./Home.scss";
 

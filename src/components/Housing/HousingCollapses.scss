@@ -1,0 +1,11 @@
+.collapses-horizontal {
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.collapses-horizontal > div {
+  flex: 1;
+}

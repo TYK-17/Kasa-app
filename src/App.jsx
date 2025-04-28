@@ -3,8 +3,8 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Housing from "./pages/Housing";
 import Error404 from "./pages/Error404";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 import logo from "/assets/logo.png";
 import "./App.scss";
 
