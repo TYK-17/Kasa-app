@@ -4,8 +4,18 @@
   gap: 60px;
   margin-top: 2rem;
   flex-wrap: wrap;
-}
 
-.collapses-horizontal > div {
-  flex: 1;
+  > div {
+    flex: 1;
+  }
+
+  // 🎯 Responsive mobile
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 20px; // Moins d'espace entre les éléments
+
+    > div {
+      width: 100%;
+    }
+  }
 }
