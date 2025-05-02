@@ -4,12 +4,12 @@ import "./Carousel.scss";
 import vector from "/assets/vector.png"; // Réutilisation de l'icône collapse
 
 function Carousel({ pictures }) {
+  const [current, setCurrent] = useState(0);
   if (!pictures || pictures.length === 0) {
     console.error("Erreur : Aucune image fournie au Carousel.");
     return null;
   }
 
-  const [current, setCurrent] = useState(0);
   const total = pictures.length;
 
   const next = () =>
