@@ -43,8 +43,22 @@
 .tags {
   margin-top: 1rem;
   display: flex;
-  flex-wrap: wrap;
   gap: 0.5rem;
+
+  @media (max-width: 768px) {
+    justify-content: flex-start;
+    width: 80%;
+
+    .tag {
+      flex: 1 1 auto;
+      min-width: 0;
+      text-align: center;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-size: clamp(10px, 3vw, 12px);
+    }
+  }
 }
 
 .housing-title {
@@ -56,6 +70,11 @@
   max-width: 70%;
   word-wrap: break-word;
   white-space: normal;
+
+  @media (max-width: 768px) {
+    font-size: 18px;
+    max-width: 80%;
+  }
 }
 
 .housing-location {

@@ -1,5 +1,5 @@
 .footer {
-  width: 100vw; /* Largeur 100% de la vue */
+  width: 100vw;
   height: 209px;
   background-color: #000;
   color: #fff;
@@ -33,13 +33,20 @@
   }
 
   @media (max-width: 768px) {
+    padding: 1rem 0;
+    height: 180px;
+
+    .footer-container {
+      gap: 0.5rem;
+    }
+
     .footer-logo {
-      width: 122px;
-      height: 39.44px;
+      width: 150px;
+      height: auto;
     }
 
     .footer-text {
-      font-size: 0.8rem;
+      font-size: 0.75rem;
     }
   }
 }
