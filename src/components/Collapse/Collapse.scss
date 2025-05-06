@@ -51,9 +51,13 @@
     line-height: 142.6%;
     color: #000;
     border-radius: 0 0 5px 5px;
-
     font-family: "Montserrat", sans-serif;
     font-weight: 400;
+
+    max-width: 100%; // ✅ empêche l'élargissement
+    width: 100%;
+    overflow-x: hidden; // ✅ empêche la barre horizontale
+    box-sizing: border-box; // ✅ contrôle des padding/margin
 
     ul {
       padding-left: 0;
@@ -61,11 +65,16 @@
 
       li {
         margin-bottom: 0.5rem;
+        word-break: break-word; // ✅ si un mot est trop long
       }
     }
 
-    p {
+    p.collapse-paragraph {
       margin: 0;
+      word-break: break-word;
+      overflow-wrap: break-word;
+      max-width: 100%;
+      box-sizing: border-box;
     }
   }
 }

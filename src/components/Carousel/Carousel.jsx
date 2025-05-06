@@ -1,13 +1,13 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
 import "./Carousel.scss";
-import vector from "/assets/vector.png"; // Réutilisation de l'icône collapse
+import vector from "/assets/vector.png";
 
 function Carousel({ pictures }) {
   const [current, setCurrent] = useState(0);
   if (!pictures || pictures.length === 0) {
     console.error("Erreur : Aucune image fournie au Carousel.");
-    return null;
+    return null; // Sécurité : éviter d'afficher un Carousel vide
   }
 
   const total = pictures.length;

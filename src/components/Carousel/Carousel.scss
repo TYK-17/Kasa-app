@@ -6,6 +6,9 @@
   overflow: hidden;
   border-radius: 25px;
   margin: 0 auto;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  padding: 0;
 
   @media (max-width: 768px) {
     width: 100%;
@@ -23,6 +26,7 @@
   object-fit: cover;
   display: block;
   border-radius: 10px;
+  box-sizing: border-box;
 
   @media (max-width: 768px) {
     border-radius: 10px;
@@ -47,6 +51,7 @@
   top: 50%;
   left: 23.36px;
   transform: translateY(-50%);
+  max-width: 100%;
 
   &:focus {
     outline: none;

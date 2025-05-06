@@ -28,7 +28,11 @@ function Collapse({ title, content }) {
 
       {open && (
         <div className="collapse-content">
-          {typeof content === "string" ? <p>{content}</p> : content}
+          {typeof content === "string" ? (
+            <p className="collapse-paragraph">{content}</p>
+          ) : (
+            content
+          )}
         </div>
       )}
     </div>

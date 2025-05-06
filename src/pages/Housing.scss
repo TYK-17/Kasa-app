@@ -8,8 +8,10 @@
 }
 
 .carousel-wrapper {
+  max-width: 1240px;
+  margin: 0 auto;
   width: 100%;
-  margin: 0 auto 2rem;
+  box-sizing: border-box;
 
   @media (max-width: 768px) {
     padding: 0 1rem;
